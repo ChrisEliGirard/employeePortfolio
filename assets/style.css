@@ -10,7 +10,7 @@ body {
   font-size: 1.75rem;
   line-height: 1.5;
   color: black;
-  background-color: white;
+  background-color: rgb(2, 196, 255);
 }
 
 h1,
@@ -41,15 +41,31 @@ h4 {
 }
 
 header {
-  width: 96%;
-  margin: 0 auto;
+  margin: 0px 0px 0px 0px;
   padding: 2.5rem;
-  text-align: center;
+  border: 5px solid black;
+  border-bottom: 0px;
+  background-color: lightblue;
 }
 
 header h1.pageTitle {
   padding: 1rem 1.2rem;
-  font-size: 4.5rem;
+  font-size: 4rem;
+  text-align: left;
+}
+
+header nav.headerNav {
+  text-align: right;
+}
+
+.headerBelow {
+  border: 5px solid black;
+  background-color: aqua;
+}
+
+.pageSubtitle {
+  text-align: right;
+  padding: 0px 10px; 
 }
 
 main {
@@ -62,110 +78,64 @@ footer {
   text-align: center;
 }
 
-/* create our main grid with flexbox, use negative margins to offset the padding on the .card-column class */
-.row {
+.cards {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
   margin-left: -1.5rem;
   margin-right: -1.5rem;
+  padding: 0px 5px;
+  background-color: teal;
+  border: 3px solid;
 }
 
-.justify-center {
-  justify-content: center;
+.cardHeader {
+  /*float: left;*/
+  min-width: 175px;
+  max-width: 175px;
+  margin: 2rem 0rem 1.5rem 0rem;
+  border-right: 5px solid black;
 }
 
-/* using a mobile-first approach, set base column width to be 100% and we'll update it using media queries for larger screen sizes */
-.card-column {
-  flex: 1 0 100%;
-  padding: 1.5rem;
-  /* when the screen resizes, make it so our columns don't jump in size */
-  transition: flex-basis 500ms linear;
-  margin-bottom: 1.5rem;
+.cardBody {
+  /*float: right;*/
+  display: inline;
+  padding: 5px 0px 0px 0px;
+  margin: 10px;
 }
 
-/* make each code card a flexbox column to align and justify content within it */
-.code-card {
+.cardText {
+  flex-wrap: wrap;
+  padding-left: 25px;
+}
+
+img {
+  max-width: 100%;
+  max-height: auto;
+}
+.projectImages {
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  min-height: 100%;
-  padding: 2rem;
-  color: var(--heliotrope);
-
-  /* outline is like border, but on the outside of the box instead of inside */
-  outline: 2px dashed var(--gin);
-  outline-offset: -2px;
-  transition: all 0.5s ease-in-out;
+  /*max-width: 400px;
+  max-height: 400px;*/
 }
 
-.code-card .card-header {
-  /* use position and negative margins to move title of card over the card's outline and create an overlap effect */
-  position: relative;
-  margin: -4rem 0 1.5rem 0;
-  padding: 0.5rem 1rem;
-  background-color: var(--outer-space);
-  color: var(--heliotrope);
-  border: 2px solid var(--gin);
-  border-radius: 8px;
-  transition: all 0.5s ease-in-out;
-}
-
-/* set an outer and inner drop shadow on the card to create a glowing effect on hover */
-.code-card:hover,
-.code-card:hover .card-header {
-  box-shadow: inset 0px 0px 8px var(--heliotrope), 0 0 15px var(--heliotrope);
-}
-
-/* each card's code block grows to the height of the largest code block on the page, making each card even in height */
-.code-card .code-block {
-  flex-grow: 1;
-}
-
-.code-card pre {
-  /* set styles to make it so code wraps in <pre> instead of overflowing */
-  white-space: pre-wrap;
-  overflow: auto;
-  tab-size: 4;
-  padding: 1.2rem 1rem;
-  color: var(--gin);
-  border-radius: 8px;
-  /* use linear-gradient() function to create a fading background  */
-  background-image: linear-gradient(
-    rgba(232, 102, 236, 0.3) 0%,
-    rgba(232, 102, 236, 0.6) 100%
-  );
+.imgCards {
   display: flex;
-  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  padding: 5px 20px 0px 20px;
 }
 
-/* on <pre> click, select all contents so the code is highlighted */
-.code-card pre:active {
-  user-select: all;
+.imgCard {
+  break-inside: avoid-column;
+  border: 2px solid black;
+  margin: 5px 0px;
+  padding: 0px;
+  max-width: 400px;
+  max-height: auto;
 }
 
-/* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
-@media screen and (min-width: 768px) {
-  /* on tablets, set columns to only be 50% of the width and not grow */
-  .card-column {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-
-  /* select the last child to grow to full width if it has space to grow */
-  .card-column:last-child {
-    flex-grow: 1;
-  }
-}
-
-/* media query for larger screens */
-@media screen and (min-width: 992px) {
-  header {
-    width: 75%;
-  }
-
-  .card-column {
-    flex: 0 0 33.333%;
-    max-width: 33.333%;
-  }
+.workTitles {
+  font-size: 2.5rem;
+  background-color: white;
+  border: 2px solid black;
 }
