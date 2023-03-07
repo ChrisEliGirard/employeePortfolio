@@ -21,9 +21,9 @@ SO THAT I, Hiring Managers, and Client have quick access to my Work
 
 ## Preview
 
-The following image shows a mock-up of the generated HTML’s appearance and functionality:
+The following image shows the HTML’s appearance:
 
-![HTML Website featuring all of my projects](./Assets/10-object-oriented-programming-homework-demo.png)
+![HTML Website featuring all of my projects](assets/images/Portfolio.png)
 
 The following image shows what the webpage looks like on load          
   
