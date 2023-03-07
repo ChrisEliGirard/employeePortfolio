@@ -1,0 +1,25 @@
+{
+  "name": "employeeportfolio",
+  "version": "1.0.0",
+  "description": "My Portfolio Page",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisEliGirard/employeePortfolio.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "Christopher Girard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChrisEliGirard/employeePortfolio/issues"
+  },
+  "homepage": "https://github.com/ChrisEliGirard/employeePortfolio#readme",
+  "dependencies": {
+    "tailwindcss": "^3.2.7"
+  }
+}
